@@ -6,7 +6,6 @@ export default function PromoBanners() {
       
       {/* Banner 1: Join the Movement */}
       <div className="relative group overflow-hidden rounded-md bg-[#121212] text-white p-8 sm:p-12 flex flex-col justify-between min-h-[350px]">
-        {/* Background Image with Opacity */}
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=800" 
@@ -15,7 +14,6 @@ export default function PromoBanners() {
           />
         </div>
         
-        {/* Content */}
         <div className="relative z-10 space-y-2">
           <span className="text-[11px] uppercase tracking-widest text-gray-300 font-semibold">
             Join the Movement
@@ -34,7 +32,6 @@ export default function PromoBanners() {
 
       {/* Banner 2: Limited Drop */}
       <div className="relative group overflow-hidden rounded-md bg-[#121212] text-white p-8 sm:p-12 flex flex-col justify-between min-h-[350px]">
-        {/* Background Image with Opacity */}
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800" 
@@ -43,7 +40,6 @@ export default function PromoBanners() {
           />
         </div>
         
-        {/* Content */}
         <div className="relative z-10 space-y-2">
           <span className="text-[11px] uppercase tracking-widest text-gray-300 font-semibold">
             Limited Drop

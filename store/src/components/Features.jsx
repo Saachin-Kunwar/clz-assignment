@@ -6,7 +6,7 @@ export default function Features() {
     {
       icon: <Truck size={24} className="text-black" />,
       title: "FREE SHIPPING",
-      description: "On orders over $100"
+      description: "On orders over Rs.100"
     },
     {
       icon: <RotateCcw size={24} className="text-black" />,

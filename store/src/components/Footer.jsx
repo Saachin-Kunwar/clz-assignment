@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Instagram, Twitter, Youtube, Facebook } from 'lucide-react';
+import { Mail, Camera, MessageCircle, CirclePlay, Globe } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -35,15 +35,15 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <h2 className="text-2xl font-black tracking-tighter uppercase">URBANX</h2>
+            <h2 className="text-2xl font-black tracking-tighter uppercase">Vapor Store</h2>
             <p className="text-xs text-neutral-400 max-w-sm leading-relaxed">
               Streetwear made for the bold. Designed to break the norm. Worn worldwide.
             </p>
             <div className="flex items-center gap-4 text-neutral-400 pt-2">
-              <Instagram size={18} className="hover:text-yellow-400 cursor-pointer" />
-              <Twitter size={18} className="hover:text-yellow-400 cursor-pointer" />
-              <Youtube size={18} className="hover:text-yellow-400 cursor-pointer" />
-              <Facebook size={18} className="hover:text-yellow-400 cursor-pointer" />
+              <Camera size={18} className="hover:text-yellow-400 cursor-pointer" />
+              <MessageCircle size={18} className="hover:text-yellow-400 cursor-pointer" />
+              <CirclePlay size={18} className="hover:text-yellow-400 cursor-pointer" />
+              <Globe size={18} className="hover:text-yellow-400 cursor-pointer" />
             </div>
           </div>
 
@@ -90,7 +90,7 @@ export default function Footer() {
 
         {/* Bottom Copyright & Payment Icons */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
-          <p>© 2026 URBANX. All rights reserved.</p>
+          <p>© 2026 VAPOR . All rights reserved.</p>
           <div className="flex items-center gap-4">
             <span>NEP / BTL</span>
             <span>🔒 Secure Checkout</span>

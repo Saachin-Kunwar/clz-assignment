@@ -6,42 +6,42 @@ export default function NewArrivals() {
     {
       id: 1,
       title: "CHAOS TEE - BLACK",
-      price: "$49.00",
+      price: "RS490.00",
       image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=500",
       colors: ["bg-black", "bg-gray-500", "bg-white"]
     },
     {
       id: 2,
       title: "WASHED HOODIE - CHARCOAL",
-      price: "$89.00",
+      price: "Rs.890.00",
       image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&q=80&w=500",
       colors: ["bg-gray-800", "bg-stone-600"]
     },
     {
       id: 3,
       title: "UTILITY CARGO PANTS - BLACK",
-      price: "$99.00",
+      price: "Rs.999.00",
       image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&q=80&w=500",
       colors: ["bg-black", "bg-neutral-700", "bg-amber-900"]
     },
     {
       id: 4,
       title: "SKETCH TEE - SAND",
-      price: "$45.00",
+      price: "Rs450.00",
       image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=500",
       colors: ["bg-stone-300", "bg-black"]
     },
     {
       id: 5,
       title: "URBANX CAP - BLACK",
-      price: "$45.00",
+      price: "Rs455.00",
       image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&q=80&w=500",
       colors: ["bg-black", "bg-emerald-900"]
     },
     {
       id: 6,
       title: "SOCIETY HOODIE - OLIVE",
-      price: "$89.00",
+      price: "Rs895.00",
       image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=500",
       colors: ["bg-zinc-800", "bg-black"]
     }
@@ -88,7 +88,7 @@ export default function NewArrivals() {
               {product.colors.map((colorClass, idx) => (
                 <span 
                   key={idx} 
-                  className={`w-3 h-3 rounded-full border border-gray-300 ${colorClass}`}
+                  className={`w-3 h-3 rounded-full border border-gray-300 Rs{colorClass}`}
                 />
               ))}
             </div>
