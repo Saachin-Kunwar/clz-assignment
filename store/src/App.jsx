@@ -5,6 +5,8 @@ import Hero from './components/Hero';
 import Features from './components/Features';
 import Categories from './components/Categories';
 import NewArrivals from './components/NewArrivals';
+import PromoBanners from './components/PromoBanners';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -15,7 +17,8 @@ export default function App() {
       <Features />
       <Categories />
       <NewArrivals />
-      {/* Next up: Promo Banners and Footer */}
+      <PromoBanners />
+      <Footer />
     </div>
   );
 }
