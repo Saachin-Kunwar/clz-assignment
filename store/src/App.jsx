@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import Categories from './components/Categories';
+import NewArrivals from './components/NewArrivals';
 
 export default function App() {
   return (
@@ -13,8 +14,8 @@ export default function App() {
       <Hero />
       <Features />
       <Categories />
-
-      {/* Next components like Hero, Categories, NewArrivals will go here */}
+      <NewArrivals />
+      {/* Next up: Promo Banners and Footer */}
     </div>
   );
 }
