@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { productsData } from '../data/products';
+import { useCart } from '../context/CartContext';
 import { ArrowLeft, ShieldCheck, Truck, RotateCcw } from 'lucide-react';
 
 export default function ProductDetail() {
   const { id } = useParams();
   const product = productsData.find((p) => p.id === parseInt(id));
+  const { addToCart } = useCart();
 
   const [selectedSize, setSelectedSize] = useState('');
-  const [added, setAdded] = useState(false);
 
   if (!product) {
     return (
@@ -22,28 +23,28 @@ export default function ProductDetail() {
   }
 
   const handleAddToCart = () => {
+    const defaultSize = product.sizes && product.sizes.length > 0 ? product.sizes[0] : "Standard";
+    const chosenSize = selectedSize || defaultSize;
+
     if (!selectedSize && product.sizes.length > 1 && product.sizes[0] !== "One Size") {
       alert("Please select a size first!");
       return;
     }
-    setAdded(true);
-    setTimeout(() => setAdded(false), 2500);
+
+    addToCart(product, chosenSize);
   };
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
-      {/* Back link */}
       <Link to="/shop" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-500 hover:text-black mb-8 transition-colors">
         <ArrowLeft size={16} /> Back to Shop
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        {/* Product Image */}
         <div className="bg-gray-100 rounded-lg overflow-hidden aspect-[3/4] shadow-sm">
           <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
         </div>
 
-        {/* Product Details & Actions */}
         <div className="space-y-6">
           <div>
             <span className="text-xs uppercase tracking-widest text-gray-400 font-semibold">{product.category}</span>
@@ -53,7 +54,6 @@ export default function ProductDetail() {
 
           <p className="text-gray-600 text-sm leading-relaxed">{product.description}</p>
 
-          {/* Size Selector */}
           {product.sizes && product.sizes.length > 0 && (
             <div className="space-y-3">
               <label className="block text-xs font-bold uppercase tracking-wider text-gray-900">Select Size</label>
@@ -75,32 +75,20 @@ export default function ProductDetail() {
             </div>
           )}
 
-          {/* Add to Cart CTA */}
           <div className="pt-4">
             <button 
               onClick={handleAddToCart}
               className="w-full bg-black text-white font-bold uppercase text-xs sm:text-sm py-4 tracking-wider hover:bg-gray-800 transition-colors shadow-sm"
             >
-              {added ? "Added to Bag ✓" : "Add to Cart"}
+              Add to Cart
             </button>
           </div>
 
-          {/* Extra Info Badges */}
           <div className="border-t border-gray-200 pt-6 space-y-3 text-xs text-gray-600">
-            <div className="flex items-center gap-3">
-              <Truck size={18} className="text-black" />
-              <span>Free standard shipping on orders over $100</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <RotateCcw size={18} className="text-black" />
-              <span>30-day hassle-free return policy</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <ShieldCheck size={18} className="text-black" />
-              <span>100% secure checkout and data encryption</span>
-            </div>
+            <div className="flex items-center gap-3"><Truck size={18} className="text-black" /><span>Free standard shipping on orders over $100</span></div>
+            <div className="flex items-center gap-3"><RotateCcw size={18} className="text-black" /><span>30-day hassle-free return policy</span></div>
+            <div className="flex items-center gap-3"><ShieldCheck size={18} className="text-black" /><span>100% secure checkout and data encryption</span></div>
           </div>
-
         </div>
       </div>
     </div>
