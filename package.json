@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "dev": "npm --prefix ./store run dev -- --host 0.0.0.0",
+    "build": "npm --prefix ./store run build",
+    "preview": "npm --prefix ./store run preview -- --host 0.0.0.0"
+  }
+}

@@ -35,7 +35,7 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <h2 className="text-2xl font-black tracking-tighter uppercase">Vapor Store</h2>
+            <h2 className="text-2xl font-black tracking-tighter uppercase">ROHIT STORE</h2>
             <p className="text-xs text-neutral-400 max-w-sm leading-relaxed">
               Streetwear made for the bold. Designed to break the norm. Worn worldwide.
             </p>
@@ -90,7 +90,7 @@ export default function Footer() {
 
         {/* Bottom Copyright & Payment Icons */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
-          <p>© 2026 VAPOR . All rights reserved.</p>
+          <p>© 2026 ROHIT . All rights reserved.</p>
           <div className="flex items-center gap-4">
             <span>NEP / BTL</span>
             <span>🔒 Secure Checkout</span>

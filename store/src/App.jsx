@@ -1,24 +1,30 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Categories from './components/Categories';
-import NewArrivals from './components/NewArrivals';
-import PromoBanners from './components/PromoBanners';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import Shop from './pages/Shop';
+import About from './pages/About';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans">
-      <TopBar />
-      <Navbar />
-      <Hero />
-      <Features />
-      <Categories />
-      <NewArrivals />
-      <PromoBanners />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-white text-gray-900 font-sans flex flex-col justify-between">
+        <div>
+          <TopBar />
+          <Navbar />
+          
+          {/* Routes handle page switching */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
+
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }

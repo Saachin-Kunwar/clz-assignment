@@ -1,24 +1,37 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Search, User, ShoppingBag, ChevronDown } from 'lucide-react';
 
 export default function Navbar() {
   return (
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 px-6 py-4 flex items-center justify-between">
-      {/* Logo */}
-      <div className="text-2xl font-black tracking-tighter uppercase font-sans">
-        Vapor Store
-      </div>
+      {/* Logo links to Home */}
+      <Link to="/" className="text-2xl font-black tracking-tighter uppercase font-sans">
+        URBANX
+      </Link>
 
       {/* Nav Links */}
       <ul className="hidden lg:flex items-center gap-8 font-semibold text-sm tracking-wide">
-        <li className="cursor-pointer hover:text-gray-600">HOME</li>
-        <li className="cursor-pointer hover:text-gray-600 flex items-center gap-1">
-          SHOP <ChevronDown size={14} />
+        <li>
+          <Link to="/" className="hover:text-gray-600 transition-colors">HOME</Link>
         </li>
-        <li className="cursor-pointer hover:text-gray-600">NEW ARRIVALS</li>
-        <li className="cursor-pointer hover:text-gray-600">COLLECTIONS</li>
-        <li className="cursor-pointer hover:text-gray-600">SALE</li>
-        <li className="cursor-pointer hover:text-gray-600">ABOUT US</li>
+        <li>
+          <Link to="/shop" className="hover:text-gray-600 flex items-center gap-1 transition-colors">
+            SHOP <ChevronDown size={14} />
+          </Link>
+        </li>
+        <li>
+          <Link to="/shop" className="hover:text-gray-600 transition-colors">NEW ARRIVALS</Link>
+        </li>
+        <li>
+          <Link to="/shop" className="hover:text-gray-600 transition-colors">COLLECTIONS</Link>
+        </li>
+        <li>
+          <Link to="/shop" className="hover:text-gray-600 transition-colors">SALE</Link>
+        </li>
+        <li>
+          <Link to="/about" className="hover:text-gray-600 transition-colors">ABOUT US</Link>
+        </li>
       </ul>
 
       {/* Right Icons */}
